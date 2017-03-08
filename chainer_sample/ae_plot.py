@@ -59,3 +59,21 @@ ans = yt.data
 for i in range(n):
     print ans[i,:]
 
+
+# Plot
+import matplotlib.pyplot as plt
+x = variable(Xtrain)
+yt = F.sigmoid(model.l1(x))
+ans = yt.data
+ansx1 = ans[0:50,0]
+ansx2 = ans[50:100,0]
+ansx3 = ans[100:150,0]
+ansy1 = ans[0:50,1]
+ansy2 = ans[50:100,1]
+ansy3 = ans[100:150,1]
+plt.scatter(ansx1, ansy1, marker="^")
+plt.scatter(ansx2, ansy2, marker="o")
+plt.scatter(ansx3, ansy3, marker="+")
+plot.show()
+
+
